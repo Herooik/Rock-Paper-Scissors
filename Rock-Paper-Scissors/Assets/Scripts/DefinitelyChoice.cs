@@ -9,13 +9,14 @@ public class DefinitelyChoice : MonoBehaviour
     [SerializeField] private GameObject _player1, _player2;
     [SerializeField] private GameObject _definitelyChoosePlayer1, _definitelyChoosePlayer2;
     [SerializeField] private GameObject _objectButtons;
-
+    [SerializeField] private GameObject[] _objects;
+    
     [SerializeField] private InputController _inputController;
     [SerializeField] private GameplayController _gameplayController;
     
     private bool _isChoose = false;
-    
-    
+
+
     public void YesPlayer1()
     {
         _definitelyChoosePlayer1.SetActive(false);
@@ -46,10 +47,14 @@ public class DefinitelyChoice : MonoBehaviour
     
     public void NoPlayer1()
     {
-        GameObject _object = GameObject.FindGameObjectWithTag("Object");
         _definitelyChoosePlayer1.SetActive(false);
+        for (int i = 0; i <= 2; i++)
+        {
+            _objects[i].SetActive(false);
+        }
+
         _objectButtons.SetActive(true);
-        Destroy(_object);
+       
     }
     
     public void YesPlayer2()
@@ -88,9 +93,12 @@ public class DefinitelyChoice : MonoBehaviour
     public void NoPlayer2()
     {
         _isChoose = false;
-        GameObject _object = GameObject.FindGameObjectWithTag("Object");
         _definitelyChoosePlayer2.SetActive(false);
+        for (int i = 0; i <= 2; i++)
+        {
+            _objects[i].SetActive(false);
+        }
         _objectButtons.SetActive(true);
-        Destroy(_object);
+        
     }
 }

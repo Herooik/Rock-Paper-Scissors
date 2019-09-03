@@ -344,11 +344,11 @@ GameObject:
   - component: {fileID: 4292003105687808156}
   m_Layer: 0
   m_Name: Scissors
-  m_TagString: Object
+  m_TagString: Items
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4237876155505654278
 Transform:
   m_ObjectHideFlags: 0
