@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class InputController : MonoBehaviour
 {
-    public string _choiceName;
+    [HideInInspector] public string _choiceName;
     
     public void GetChoicePlayer1()
     {
