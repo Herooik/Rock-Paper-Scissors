@@ -48,6 +48,7 @@ public class DefinitelyChoice : MonoBehaviour
     public void NoPlayer1()
     {
         _definitelyChoosePlayer1.SetActive(false);
+        
         for (int i = 0; i <= 2; i++)
         {
             _objects[i].SetActive(false);
@@ -60,6 +61,7 @@ public class DefinitelyChoice : MonoBehaviour
     public void YesPlayer2()
     {
         _isChoose = true;
+        
         _definitelyChoosePlayer2.SetActive(false);
         _player1.SetActive(true);
         _player2.SetActive(true);
@@ -94,10 +96,12 @@ public class DefinitelyChoice : MonoBehaviour
     {
         _isChoose = false;
         _definitelyChoosePlayer2.SetActive(false);
+        
         for (int i = 0; i <= 2; i++)
         {
             _objects[i].SetActive(false);
         }
+        
         _objectButtons.SetActive(true);
         
     }

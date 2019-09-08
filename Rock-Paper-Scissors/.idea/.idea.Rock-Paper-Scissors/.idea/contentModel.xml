@@ -21,7 +21,6 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="ButtonSound.cs" t="Include" />
           <e p="ChooseModel.cs" t="Include" />
           <e p="DefinitelyChoice.cs" t="Include" />
           <e p="GameplayController.cs" t="Include" />

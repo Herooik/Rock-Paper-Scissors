@@ -18,6 +18,7 @@ public class GameplayController : MonoBehaviour
    private GameChoices _player1choice = GameChoices.NONE, _player2choice = GameChoices.NONE;
 
    [SerializeField] private Text _playerWonText, _drawText, _player1scoreText, _player2scoreText;
+   
    [SerializeField] private GameObject _restartGameButton, _backToMenuButton, _quitButton;
    
    [HideInInspector] public int _player1score, _player2score;
@@ -80,31 +81,36 @@ public class GameplayController : MonoBehaviour
          _drawText.text = "DRAW";
          StartCoroutine(DisplayDrawTextCo());
          ActivateEndGameButtons();
-         
       }
 
       if (_player1choice == GameChoices.ROCK && _player2choice == GameChoices.SCISSORS)
       {
          _playerWonText.text = "PLAYER 1 WON";
          StartCoroutine(DisplayPlayerWonTextCo());
+         
          _player1score += 1;
          _player1scoreText.text = _player1score.ToString();
+         
          ActivateEndGameButtons();
       }
       if (_player1choice == GameChoices.SCISSORS && _player2choice == GameChoices.PAPER)
       {
          _playerWonText.text = "PLAYER 1 WON";
          StartCoroutine(DisplayPlayerWonTextCo());
+         
          _player1score += 1;
          _player1scoreText.text = _player1score.ToString();
+         
          ActivateEndGameButtons();
       }
       if (_player1choice == GameChoices.PAPER && _player2choice == GameChoices.ROCK)
       {
          _playerWonText.text = "PLAYER 1 WON";
          StartCoroutine(DisplayPlayerWonTextCo());
+         
          _player1score += 1;
          _player1scoreText.text = _player1score.ToString();
+         
          ActivateEndGameButtons();
       }
       
@@ -112,24 +118,30 @@ public class GameplayController : MonoBehaviour
       {
          _playerWonText.text = "PLAYER 2 WON";
          StartCoroutine(DisplayPlayerWonTextCo());
+         
          _player2score += 1;
          _player2scoreText.text = _player2score.ToString();
+         
          ActivateEndGameButtons();
       }
       if (_player2choice == GameChoices.SCISSORS && _player1choice == GameChoices.PAPER)
       {
          _playerWonText.text = "PLAYER 2 WON";
          StartCoroutine(DisplayPlayerWonTextCo());
+         
          _player2score += 1;
          _player2scoreText.text = _player2score.ToString();
+         
          ActivateEndGameButtons();
       }
       if (_player2choice == GameChoices.PAPER && _player1choice == GameChoices.ROCK)
       {
          _playerWonText.text = "PLAYER 2 WON";
          StartCoroutine(DisplayPlayerWonTextCo());
+         
          _player2score += 1;
          _player2scoreText.text = _player2score.ToString();
+         
          ActivateEndGameButtons();
       }
    }
