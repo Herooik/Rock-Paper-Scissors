@@ -11,8 +11,8 @@ public class GUI : MonoBehaviour
     {
         PlayerPrefs.SetInt("Player1Score", 0);
         PlayerPrefs.SetInt("Player2Score", 0);
-        
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+        StartCoroutine(DelaySceneLoadCo(1));
     }
 
    
@@ -22,19 +22,25 @@ public class GUI : MonoBehaviour
         PlayerPrefs.SetInt("Player1Score", _gameplayController._player1score);
         PlayerPrefs.SetInt("Player2Score", _gameplayController._player2score);
         
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        StartCoroutine(DelaySceneLoadCo(1));
         
     }
 
     public void BackToMenu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        StartCoroutine(DelaySceneLoadCo(0));
     }
     
     public void QuitGame()
     {
         Debug.Log("Quit");
         Application.Quit();
+    }
+
+    IEnumerator DelaySceneLoadCo(int numOfScene)
+    {
+        yield return new WaitForSeconds(.2f);        // allow to play sound on button click
+        SceneManager.LoadScene(numOfScene);
     }
     
 }

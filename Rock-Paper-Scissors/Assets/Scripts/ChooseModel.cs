@@ -6,8 +6,7 @@ public class ChooseModel : MonoBehaviour
 {
     [SerializeField] private GameObject _definitelyChoose;
     [SerializeField] private GameObject _objectButtons;
-
-    public GameObject _object;
+    [SerializeField] private GameObject _object;
     
     public void AddObject()
     {
