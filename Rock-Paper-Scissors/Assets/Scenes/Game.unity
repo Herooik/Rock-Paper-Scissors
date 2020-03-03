@@ -717,13 +717,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerWonText: {fileID: 1517384768}
   _drawText: {fileID: 1953893767}
-  _player1scoreText: {fileID: 1648149908}
-  _player2scoreText: {fileID: 420108118}
+  _playerOneScoreText: {fileID: 1648149908}
+  _playerTwoScoreText: {fileID: 420108118}
   _restartGameButton: {fileID: 798125394}
   _backToMenuButton: {fileID: 339720419}
   _quitButton: {fileID: 161925228}
-  _player1score: 0
-  _player2score: 0
+  _playerOneScore: 0
+  _playerTwoScore: 0
 --- !u!4 &231403149
 Transform:
   m_ObjectHideFlags: 0
@@ -1466,7 +1466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _definitelyChoose: {fileID: 1592291209}
   _objectButtons: {fileID: 1227654199}
-  _object: {fileID: 926226107}
+  _objectToSpawn: {fileID: 926226107}
 --- !u!114 &419095643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1809,7 +1809,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _definitelyChoose: {fileID: 1592291209}
   _objectButtons: {fileID: 1227654199}
-  _object: {fileID: 1675021085}
+  _objectToSpawn: {fileID: 1675021085}
 --- !u!114 &642813008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2071,7 +2071,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _definitelyChoose: {fileID: 1592291209}
   _objectButtons: {fileID: 1227654199}
-  _object: {fileID: 1343048430}
+  _objectToSpawn: {fileID: 1343048430}
 --- !u!114 &716741768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2990,7 +2990,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1061710508}
   m_Layer: 0
-  m_Name: Player1
+  m_Name: PlayerOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3077,10 +3077,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ab1375a042d2a547b51d23f36c4533a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player1: {fileID: 1061710507}
-  _player2: {fileID: 2089041205}
-  _definitelyChoosePlayer1: {fileID: 1525411606}
-  _definitelyChoosePlayer2: {fileID: 1592291209}
+  _playerOne: {fileID: 1061710507}
+  _playerTwo: {fileID: 2089041205}
+  _definitelyChoosePlayerOne: {fileID: 1525411606}
+  _definitelyChoosePlayerTwo: {fileID: 1592291209}
   _objectButtons: {fileID: 1227654199}
   _objects:
   - {fileID: 926226107}
@@ -3462,10 +3462,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ab1375a042d2a547b51d23f36c4533a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player1: {fileID: 1061710507}
-  _player2: {fileID: 2089041205}
-  _definitelyChoosePlayer1: {fileID: 1525411606}
-  _definitelyChoosePlayer2: {fileID: 1592291209}
+  _playerOne: {fileID: 1061710507}
+  _playerTwo: {fileID: 2089041205}
+  _definitelyChoosePlayerOne: {fileID: 1525411606}
+  _definitelyChoosePlayerTwo: {fileID: 1592291209}
   _objectButtons: {fileID: 1337810085}
   _objects:
   - {fileID: 380366812}
@@ -3722,7 +3722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _definitelyChoose: {fileID: 1525411606}
   _objectButtons: {fileID: 1337810085}
-  _object: {fileID: 1061949020}
+  _objectToSpawn: {fileID: 1061949020}
 --- !u!1 &1227654199
 GameObject:
   m_ObjectHideFlags: 0
@@ -3986,8 +3986,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 231403150}
-        m_MethodName: GetChoicePlayer1
+      - m_Target: {fileID: 1310386860}
+        m_MethodName: AddObject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3997,8 +3997,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1310386860}
-        m_MethodName: AddObject
+      - m_Target: {fileID: 231403150}
+        m_MethodName: GetChoicePlayer1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4073,7 +4073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _definitelyChoose: {fileID: 1525411606}
   _objectButtons: {fileID: 1337810085}
-  _object: {fileID: 449243992}
+  _objectToSpawn: {fileID: 449243992}
 --- !u!1001 &1322774488
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4497,10 +4497,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ab1375a042d2a547b51d23f36c4533a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player1: {fileID: 1061710507}
-  _player2: {fileID: 2089041205}
-  _definitelyChoosePlayer1: {fileID: 1525411606}
-  _definitelyChoosePlayer2: {fileID: 1592291209}
+  _playerOne: {fileID: 1061710507}
+  _playerTwo: {fileID: 2089041205}
+  _definitelyChoosePlayerOne: {fileID: 1525411606}
+  _definitelyChoosePlayerTwo: {fileID: 1592291209}
   _objectButtons: {fileID: 1337810085}
   _objects:
   - {fileID: 380366812}
@@ -4753,7 +4753,7 @@ GameObject:
   - component: {fileID: 1525411609}
   - component: {fileID: 1525411608}
   m_Layer: 5
-  m_Name: DefinitelyChoosePlayer1
+  m_Name: DefinitelyChoosePlayerOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5012,7 +5012,7 @@ GameObject:
   - component: {fileID: 1592291212}
   - component: {fileID: 1592291211}
   m_Layer: 5
-  m_Name: DefinitelyChoosePlayer2
+  m_Name: DefinitelyChoosePlayerTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5401,10 +5401,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ab1375a042d2a547b51d23f36c4533a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player1: {fileID: 1061710507}
-  _player2: {fileID: 2089041205}
-  _definitelyChoosePlayer1: {fileID: 1525411606}
-  _definitelyChoosePlayer2: {fileID: 1592291209}
+  _playerOne: {fileID: 1061710507}
+  _playerTwo: {fileID: 2089041205}
+  _definitelyChoosePlayerOne: {fileID: 1525411606}
+  _definitelyChoosePlayerTwo: {fileID: 1592291209}
   _objectButtons: {fileID: 1227654199}
   _objects:
   - {fileID: 926226107}
@@ -5924,7 +5924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _definitelyChoose: {fileID: 1525411606}
   _objectButtons: {fileID: 1337810085}
-  _object: {fileID: 380366812}
+  _objectToSpawn: {fileID: 380366812}
 --- !u!1001 &2083202147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6009,7 +6009,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2089041206}
   m_Layer: 0
-  m_Name: Player2
+  m_Name: PlayerTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

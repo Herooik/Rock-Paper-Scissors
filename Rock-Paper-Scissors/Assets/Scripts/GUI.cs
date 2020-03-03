@@ -9,8 +9,8 @@ public class GUI : MonoBehaviour
     
     public void StartGame()
     {
-        PlayerPrefs.SetInt("Player1Score", 0);
-        PlayerPrefs.SetInt("Player2Score", 0);
+        PlayerPrefs.SetInt("PlayerOneScore", 0);
+        PlayerPrefs.SetInt("PlayerTwoScore", 0);
 
         StartCoroutine(DelaySceneLoadCo(1));
     }
@@ -19,8 +19,9 @@ public class GUI : MonoBehaviour
 
     public void RestartGame()
     {
-        PlayerPrefs.SetInt("Player1Score", _gameplayController._player1score);
-        PlayerPrefs.SetInt("Player2Score", _gameplayController._player2score);
+       // Debug.Log(_gameplayController._playerOneScore);
+        PlayerPrefs.SetInt("PlayerOneScore", _gameplayController._playerOneScore);
+        PlayerPrefs.SetInt("PlayerTwoScore", _gameplayController._playerTwoScore);
         
         StartCoroutine(DelaySceneLoadCo(1));
         
